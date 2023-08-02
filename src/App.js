@@ -22,13 +22,12 @@ export default class App extends Component {
     }
 
   render() {
+    const list=this.state.data.map(item=><h3 key={item.feederid}>{item.actname}</h3>)
 
 
     return (
       <div>
-        {
-          this.state.data.map(item=><h3 key={item.feederid}>{item.actname}</h3>)
-        }
+        {list}
       </div>
     )
   }
