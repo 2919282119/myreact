@@ -1,0 +1,27 @@
+
+.board{
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    font-size: 18px;
+    margin:80px auto 0px;  
+    background-color: rgba(192, 194, 194, 0.881); 
+}
+
+.board div{
+    height: 50px;
+}
+.board div input{
+    height: 24px;
+    border: none;
+    border-radius: 4px;
+}
+.title{
+    font-size: 28px;
+    color: rgb(87, 85, 83);
+    font-family:cursive;
+}

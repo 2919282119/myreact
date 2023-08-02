@@ -1,0 +1,56 @@
+button{
+    width: 150px;
+    height: 40px;
+    color:#fff;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+button::before{
+    content: "";
+    width: 158px;
+    height:48px;
+    position: absolute;
+    top:-4px;
+    left:-4px;
+    border-radius: 10px;
+    transition:all 0.35s;
+    z-index:-1;
+    background:linear-gradient(45deg,red,orange,yellow,green,cyan,blue,purple,red);
+    filter: blur(5px);
+    background-size: 1000%;
+    animation: animate 40s linear infinite;
+    opacity: 0;
+}
+button::after{
+    content: "";
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height:100%;
+    background:#3a3a3a;
+    border-radius: 10px;
+    z-index: -1;
+    opacity: 1;
+}
+button:hover::before{
+    opacity: 1;
+}
+button:active::after{
+    opacity: 0;
+}
+button:active{
+    color:#bebbbb;
+}
+@keyframes animate {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 1000% 0;
+    }
+}
